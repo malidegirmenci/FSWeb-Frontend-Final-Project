@@ -24,6 +24,10 @@ import visualStudioLogo from './skills/visualStudio_logo.png';
 import project01 from './projects/project_01.png';
 import project02 from './projects/project_02.png';
 
+/*Socials*/
+import github from './social/github.svg';
+import linkedin from './social/linkedin.svg';
+
 export const Images = {
     shapes:{
         ellipeses:{
@@ -54,5 +58,9 @@ export const Images = {
     projects:{
         project01,
         project02,
+    },
+    socials:{
+        github,
+        linkedin
     }
 }
