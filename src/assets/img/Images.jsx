@@ -28,6 +28,10 @@ import projectJourney from './projects/project_02.png';
 /*Socials*/
 import github from './social/github.svg';
 import linkedin from './social/linkedin.svg';
+import atSign from './social/at-sign.svg';
+import codepen from './social/codepen.svg';
+import instagram from './social/instagram.svg';
+import twitter from './social/twitter.svg';
 
 export const Images = {
     shapes:{
@@ -63,6 +67,10 @@ export const Images = {
     },
     socials:{
         github,
-        linkedin
+        linkedin,
+        twitter,
+        instagram,
+        atSign,
+        codepen
     }
 }
