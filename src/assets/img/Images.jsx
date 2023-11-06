@@ -22,8 +22,8 @@ import reduxLogo from './skills/redux_logo.png';
 import visualStudioLogo from './skills/visualStudio_logo.png';
 
 /*Projects*/
-import project01 from './projects/project_01.png';
-import project02 from './projects/project_02.png';
+import projectWorkintech from './projects/project_01.png';
+import projectJourney from './projects/project_02.png';
 
 /*Socials*/
 import github from './social/github.svg';
@@ -58,8 +58,8 @@ export const Images = {
         visualStudioLogo,
     },
     projects:{
-        project01,
-        project02,
+        projectWorkintech,
+        projectJourney,
     },
     socials:{
         github,
