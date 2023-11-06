@@ -39,7 +39,7 @@ export default function Hero() {
                 </div>
                 <div className='relative'>
                     <div className='absolute left-[-175px]'>
-                        <img className="w-[350px] h-[375.89px] rounded-[18px] shadow object-cover" src={Images.photos.profilePhoto} />
+                        <img className="w-[350px] h-[375.89px] rounded-[18px] shadow object-cover" src={Images.photos.profilePhotoInHero} />
                     </div>
                 </div>
             </div>
