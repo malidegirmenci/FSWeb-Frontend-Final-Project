@@ -2,7 +2,7 @@ import { Images } from '../assets/img/Images'
 
 export default function Skills() {
     return (
-        <div className='flex w-[70%] mx-auto gap-16 justify-between'>
+        <div className='flex w-[70%]  py-[6rem] mx-auto gap-16 justify-between'>
             <h2 className='text-indigo-700 text-5xl font-bold tracking-wide'>Skills</h2>
             <div className='flex flex-col gap-9'>
                 <div className='flex gap-6  items-center'>
