@@ -10,7 +10,8 @@ import rectangle05 from './shapes/Rectangle_05.svg';
 import rectangle06 from './shapes/Rectangle_06.svg';
 
 /*Profile Photos*/
-import profilePhoto from './profile_photo.png';
+import profilePhotoInHero from './profile_photo.png';
+import profilePhotoInProfile from './profile_photo2.png';
 
 /*Skills*/
 import javaScriptLogo from './skills/javaScript_logo.png';
@@ -45,7 +46,8 @@ export const Images = {
         }   
     },
     photos:{
-        profilePhoto
+        profilePhotoInHero,
+        profilePhotoInProfile
     },
     skills:{
         javaScriptLogo,
