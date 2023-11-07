@@ -1,6 +1,8 @@
-import { Images } from '../assets/img/Images'
+import { useSelector } from 'react-redux';
 
 export default function Hero() {
+    const { name, headline, introduction, profilePhoto, socials } = useSelector((state) => state.data);
+
     return (
         <div className="h-screen flex font-['Inter']">
             <div className="basis-[70%] bg-[#4731D3] pt-10">
@@ -13,18 +15,20 @@ export default function Hero() {
                     </div>
                 </div>
                 <div className="flex flex-col gap-9 w-[60%] m-auto">
-                    <h1 className="text-lime-300 leading-[72px] text-[32px] font-bold ">almila</h1>
-                    <div className=" text-lime-300 text-[54px] leading-[59.40px]">I am a Frontend<br />Developer...</div>
-                    <div className=" text-white text-2xl font-normal ">...who likes to craft solid and scalable frontend products with great user experiences.</div>
+                    <h1 className="text-lime-300 leading-[72px] text-[32px] font-bold ">{name}</h1>
+                    <div className=" text-lime-300 text-[54px] leading-[59.40px]">{headline}</div>
+                    <div className=" text-white text-2xl font-normal ">{introduction}</div>
                     <div className="flex gap-3">
-                        <div className=" px-4 py-3 bg-white rounded-md border border-indigo-800 justify-center items-center gap-2.5 inline-flex">
-                            <img src={Images.socials.github}/>
-                            <div className="text-indigo-800 text-lg font-medium font-['Inter'] leading-7">Github</div>
-                        </div>
-                        <div className=" px-4 py-3 bg-white rounded-md border border-indigo-800 justify-center items-center gap-2.5 inline-flex">
-                            <img src={Images.socials.linkedin}/>
-                            <div className="text-indigo-800 text-lg font-medium  leading-7">Linkedin</div>
-                        </div>
+                        {
+                            socials.map((item, index) => {
+                                return (
+                                    <div key={index} className=" px-4 py-3 bg-white rounded-md border border-indigo-800 justify-center items-center gap-2.5 inline-flex">
+                                        <img src={item.img} />
+                                        <div className="text-indigo-800 text-lg font-medium leading-7"><a href={item.url}>{item.name}</a></div>
+                                    </div>
+                                )
+                            })
+                        }
                     </div>
                 </div>
             </div>
@@ -39,7 +43,7 @@ export default function Hero() {
                 </div>
                 <div className='relative'>
                     <div className='absolute left-[-175px]'>
-                        <img className="w-[350px] h-[375.89px] rounded-[18px] shadow object-cover" src={Images.photos.profilePhotoInHero} />
+                        <img className="w-[350px] h-[375.89px] rounded-[18px] shadow object-cover" src={profilePhoto} />
                     </div>
                 </div>
             </div>

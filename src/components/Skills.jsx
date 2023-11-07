@@ -1,36 +1,21 @@
-import { Images } from '../assets/img/Images'
+import { useSelector } from 'react-redux'
 
 export default function Skills() {
+    const { skills } = useSelector((state) => state.data);
     return (
-        <div className='flex w-[70%]  py-[6rem] mx-auto gap-16 justify-between'>
-            <h2 className='text-indigo-700 text-5xl font-bold tracking-wide'>Skills</h2>
-            <div className='flex flex-col gap-9'>
-                <div className='flex gap-6  items-center'>
-                    <img src={Images.skills.javaScriptLogo} alt='javaScript Logo' />
-                    <h3 className='text-neutral-500 text-2xl font-medium uppercase leading-9'>JAVASCRIPT</h3>
-                </div>
-                <div className='flex gap-6  items-center'>
-                    <img src={Images.skills.reactLogo} alt='react Logo' />
-                    <h3 className='text-neutral-500 text-2xl font-medium uppercase leading-9'>REACT</h3>
-                </div>
-                <div className='flex gap-6  items-center'>
-                    <img src={Images.skills.reduxLogo} alt='redux Logo' />
-                    <h3 className='text-neutral-500 text-2xl font-medium uppercase leading-9'>REDUX</h3>
-                </div>
-            </div>
-            <div className='flex flex-col gap-9'>
-                <div className='flex gap-6 items-center'>
-                    <img src={Images.skills.nodeLogo} alt='node Logo' />
-                    <h3 className='text-neutral-500 text-2xl font-medium uppercase leading-9'>NODE</h3>
-                </div>
-                <div className='flex gap-6  items-center'>
-                    <img src={Images.skills.visualStudioLogo} alt='visual studio Logo' />
-                    <h3 className='text-neutral-500 text-2xl font-medium uppercase leading-9'>VS CODE</h3>
-                </div>
-                <div className='flex gap-6  items-center'>
-                    <img src={Images.skills.figmaLogo} alt='figma Logo' />
-                    <h3 className='text-neutral-500 text-2xl font-medium uppercase leading-9'>FIGMA</h3>
-                </div>
+        <div className='flex w-[70%]  py-[6rem] first-letter: mx-auto gap-16 justify-between'>
+            <h2 className=' w-[33%] text-indigo-700 text-5xl font-bold tracking-wide'>Skills</h2>
+            <div className='w-[67%] flex gap-10 flex-wrap justify-between'>
+                {
+                    skills.map((item, index) => {
+                        return (
+                            <div className='flex gap-6 items-center w-[35%]' key={index}>
+                                <img  src={item.img} alt={`${item.name}icon`} />
+                                <h3 className=' text-neutral-500 text-2xl font-medium uppercase leading-9'>{item.name}</h3>
+                            </div>
+                        )
+                    })
+                }
             </div>
         </div>
     )
