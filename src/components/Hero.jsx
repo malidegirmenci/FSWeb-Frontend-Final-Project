@@ -1,19 +1,22 @@
+import { useContext } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useLocaleStorage } from '../hooks/useLocalStorage';
 import { changeLanguage } from '../store/actions';
+import { DarkModeContext } from '../context/darkModeContext';
 
 export default function Hero() {
     const { name, headline, introduction, profilePhoto, socials } = useSelector((state) => state.data);
     const [language, setLanguage] = useLocaleStorage("Language", useSelector((state) => state.language));
     const dispatch = useDispatch();
-    console.log(language);
-    function changeLanguageHandler(lang){
+    const { toggleDarkMode } = useContext(DarkModeContext);
+
+    function changeLanguageHandler(lang) {
         setLanguage(lang);
         dispatch(changeLanguage(lang));
     }
     return (
         <div className="h-screen flex font-['Inter']">
-            <div className="basis-[70%] bg-[#4731D3] pt-10">
+            <div className="basis-[70%] bg-[#4731D3] dark:bg-indigo-950 pt-10">
                 <div className="flex justify-end px-2">
                     <div className='flex items-center justify-end gap-2 flex-wrap'>
                         <div className="text-[15px] font-bold  justify-start tracking-wider items-start flex">
@@ -25,7 +28,7 @@ export default function Hero() {
                                 <div className='cursor-pointer' onClick={() => changeLanguageHandler("ENG")}>
                                     <span className="text-lime-300">PASS TO </span>
                                     <span className="text-zinc-300"> ENGLISH</span>
-                                    </div>
+                                </div>
                             }
                         </div>
                     </div>
@@ -48,13 +51,15 @@ export default function Hero() {
                     </div>
                 </div>
             </div>
-            <div className="basis-[30%] bg-[#CBF281] pt-10 px-2 flex flex-col gap-16  ">
-                <div className="justify-start items-center gap-4 flex">
+            <div className="basis-[30%] bg-[#CBF281] dark:bg-[#19200B] pt-10 px-2 flex flex-col gap-16  ">
+                <div className="justify-start items-center gap-4 flex" onClick={() => toggleDarkMode()}>
                     <div className="w-[167px] h-6 relative flex justify-start items-center">
-                        <div className="w-[55px] h-6 absolute bg-indigo-400 rounded-[100px]" />
-                        <div className="w-[15px] h-4 left-[35px] absolute  bg-amber-200 rounded-full" />
-                        <div className="w-0.5 h-0.5 left-[52px] top-[11px] absolute origin-top-left rotate-180 bg-pink-600 rounded-full" />
-                        <div className="left-[64px] absolute text-indigo-700 text-[15px] font-bold  tracking-wider">DARK MODE</div>
+                        <div className="w-[237px] h-[100px] relative">
+                            <div className="w-[237px] h-[100px] left-0 top-0 absolute bg-slate-900 rounded-[100px]"></div>
+                            <div className="w-[66px] h-[66px] left-[20px] top-[17px] absolute bg-yellow-50 rounded-full"></div>
+                            <div className="w-2 h-2 left-[12px] top-[46px] absolute bg-slate-900 rounded-full"></div>
+                        </div>
+                        <div className="left-[64px] absolute text-indigo-700 text-[15px] font-bold  tracking-wider cursor-pointer" >DARK MODE</div>
                     </div>
                 </div>
                 <div className='relative'>

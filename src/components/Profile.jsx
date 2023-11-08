@@ -7,7 +7,7 @@ export default function Profile() {
     const {profile, headers} = useSelector((state) => state.data)
     const language = useSelector((state) => state.language);
     return (
-        <div className="bg-[#4731D3] py-[6rem]">
+        <div className="bg-[#4731D3] dark:bg-indigo-950 py-[6rem]">
             <div className="flex flex-col w-[70%] mx-auto gap-10 flex-wrap">
                 <h2 className="text-lime-300 text-5xl font-bold leading-[48px] tracking-wide">{language === "ENG" ? headers.profile.ENG : headers.profile.TR}</h2>
                 <div className="inline-flex gap-10">
