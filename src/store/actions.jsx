@@ -4,6 +4,7 @@ import {data} from "../data/Data";
 export const FETCH_SUCCESS = "FETCH_SUCCESS";
 export const FETCH_LOADING = "FETCH_LOADING";
 export const FETCH_ERROR = "FETCH_ERROR";
+export const LANGUAGE = "LANGUAGE";
 
 export const fetchLoading = () => {
     return { type: FETCH_LOADING }
@@ -14,7 +15,9 @@ export const fetchError = (message) => {
 export const fetchSuccess = (data) => {
     return { type: FETCH_SUCCESS, payload: data }
 }
-
+export const changeLanguage =(lang) => {
+    return {type:LANGUAGE, payload:lang}
+}
 export const fetchAnother = () => (dispatch) => {
     console.log("fetchAnother started");
     dispatch(fetchLoading());

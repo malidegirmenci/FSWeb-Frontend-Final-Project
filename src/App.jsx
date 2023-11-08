@@ -12,7 +12,7 @@ function App() {
   const data = useSelector((state) => state.data);
   const loading = useSelector((state) => state.loading);
   const dispatch = useDispatch();
-
+  
   useEffect(() => {
     dispatch(fetchAnother());
     // eslint-disable-next-line react-hooks/exhaustive-deps

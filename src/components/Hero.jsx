@@ -1,23 +1,39 @@
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { useLocaleStorage } from '../hooks/useLocalStorage';
+import { changeLanguage } from '../store/actions';
 
 export default function Hero() {
     const { name, headline, introduction, profilePhoto, socials } = useSelector((state) => state.data);
-
+    const [language, setLanguage] = useLocaleStorage("Language", useSelector((state) => state.language));
+    const dispatch = useDispatch();
+    console.log(language);
+    function changeLanguageHandler(lang){
+        setLanguage(lang);
+        dispatch(changeLanguage(lang));
+    }
     return (
         <div className="h-screen flex font-['Inter']">
             <div className="basis-[70%] bg-[#4731D3] pt-10">
                 <div className="flex justify-end px-2">
                     <div className='flex items-center justify-end gap-2 flex-wrap'>
                         <div className="text-[15px] font-bold  justify-start tracking-wider items-start flex">
-                            <span className="text-lime-300">TÜRKÇE</span>
-                            <span className="text-zinc-300">’YE GEÇ</span>
+                            {language === "ENG" ?
+                                <div className='cursor-pointer' onClick={() => changeLanguageHandler("TR")}>
+                                    <span className="text-lime-300">TÜRKÇE</span>
+                                    <span className="text-zinc-300">’YE GEÇ</span>
+                                </div> :
+                                <div className='cursor-pointer' onClick={() => changeLanguageHandler("ENG")}>
+                                    <span className="text-lime-300">PASS TO </span>
+                                    <span className="text-zinc-300"> ENGLISH</span>
+                                    </div>
+                            }
                         </div>
                     </div>
                 </div>
                 <div className="flex flex-col gap-9 w-[60%] m-auto">
                     <h1 className="text-lime-300 leading-[72px] text-[32px] font-bold ">{name}</h1>
-                    <div className=" text-lime-300 text-[54px] leading-[59.40px]">{headline}</div>
-                    <div className=" text-white text-2xl font-normal ">{introduction}</div>
+                    <div className=" text-lime-300 text-[54px] leading-[59.40px]">{language === "ENG" ? headline.ENG : headline.TR}</div>
+                    <div className=" text-white text-2xl font-normal ">{language === "ENG" ? introduction.ENG : introduction.TR}</div>
                     <div className="flex gap-3">
                         {
                             socials.map((item, index) => {
