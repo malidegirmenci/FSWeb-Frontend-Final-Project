@@ -4,12 +4,12 @@ import { useSelector } from "react-redux";
 */
 
 export default function Projects() {
-    const { projects } = useSelector((state) => state.data)
+    const { projects,headers } = useSelector((state) => state.data)
     const language = useSelector((state) => state.language);
     return (
         <div className="bg-lime-300 dark:bg-[#19200B] py-[6rem] font-['Inter']">
             <div className="w-[70%] mx-auto flex flex-col gap-10">
-                <h2 className="text-indigo-700 dark:text-lime-300 text-5xl font-bold leading-[48px] tracking-wide">Projects</h2>
+                <h2 className="text-indigo-700 dark:text-lime-300 text-5xl font-bold leading-[48px] tracking-wide">{language === "ENG" ? headers.projects.ENG : headers.projects.TR}</h2>
                 {
                     projects.map((item, index) => {
                         return (

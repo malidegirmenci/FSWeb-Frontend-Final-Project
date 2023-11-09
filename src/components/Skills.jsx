@@ -1,11 +1,11 @@
 import { useSelector } from 'react-redux'
 
 export default function Skills() {
-    const { skills } = useSelector((state) => state.data);
-
+    const { skills,headers } = useSelector((state) => state.data);
+    const language = useSelector((state) => state.language);
     return (
         <div className='flex w-[70%]  py-[6rem]  dark:text-white first-letter: mx-auto gap-16 justify-between'>
-            <h2 className=' w-[33%] text-indigo-700 dark:text-lime-300 text-5xl font-bold tracking-wide'>Skills</h2>
+            <h2 className=' w-[33%] text-indigo-700 dark:text-lime-300 text-5xl font-bold tracking-wide'>{language === "ENG" ? headers.skills.ENG : headers.skills.TR}</h2>
             <div className='w-[67%] flex gap-10 flex-wrap justify-between'>
                 {
                     skills.map((item, index) => {
