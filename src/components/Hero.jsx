@@ -3,12 +3,13 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useLocaleStorage } from '../hooks/useLocalStorage';
 import { changeLanguage } from '../store/actions';
 import { DarkModeContext } from '../context/darkModeContext';
+import './Hero.css';
 
 export default function Hero() {
     const { name, headline, introduction, profilePhoto, socials } = useSelector((state) => state.data);
     const [language, setLanguage] = useLocaleStorage("Language", useSelector((state) => state.language));
     const dispatch = useDispatch();
-    const { toggleDarkMode } = useContext(DarkModeContext);
+    const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
 
     function changeLanguageHandler(lang) {
         setLanguage(lang);
@@ -52,14 +53,25 @@ export default function Hero() {
                 </div>
             </div>
             <div className="basis-[30%] bg-[#CBF281] dark:bg-[#19200B] pt-10 px-2 flex flex-col gap-16  ">
-                <div className="justify-start items-center gap-4 flex" onClick={() => toggleDarkMode()}>
-                    <div className="w-[167px] h-6 relative flex justify-start items-center">
-                        <div className="w-[237px] h-[100px] relative">
-                            <div className="w-[237px] h-[100px] left-0 top-0 absolute bg-slate-900 rounded-[100px]"></div>
-                            <div className="w-[66px] h-[66px] left-[20px] top-[17px] absolute bg-yellow-50 rounded-full"></div>
-                            <div className="w-2 h-2 left-[12px] top-[46px] absolute bg-slate-900 rounded-full"></div>
-                        </div>
-                        <div className="left-[64px] absolute text-indigo-700 text-[15px] font-bold  tracking-wider cursor-pointer" >DARK MODE</div>
+                <div className="justify-start items-center gap-4 flex">
+                    <div className="w-[240px] h-6  flex gap-2 items-center">
+                        {
+                            darkMode === false ?
+                                <div className="w-[60px] h-[25px] relative left-0 top-0 bg-[#8F88FF] rounded-[25px] cursor-pointer"  onClick={() => toggleDarkMode()}>
+                                    <div className="w-[16px] h-[16px] left-[5px] top-[5px] absolute bg-yellow-50 rounded-full animatedFirstCircle "></div>
+                                    <div className="w-0.5 h-0.5 left-[3px] top-[6px] absolute bg-[#8F88FF] rounded-full animatedSecondCircle "></div>
+                                </div>
+                                :
+                                <div className="w-[60px] h-[25px] relative left-0 top-0  bg-[#1A210B] rounded-[25px] cursor-pointer"  onClick={() => toggleDarkMode()}>
+                                    <div className="w-[16px] h-[16px] left-[37.5px] top-[5px] absolute bg-amber-200 rounded-full animatedFirstCircleReverse"></div>
+                                    <div className="w-3.5 h-3.5 left-[35px] top-[6px] absolute bg-[#1A210B] rounded-full animatedSecondCircleReverse "></div>
+                                </div>
+                        }
+                        {
+                            darkMode === false ?
+                                <div className=" text-indigo-700 text-[15px] font-bold  tracking-wider " >DARK MODE</div> :
+                                <div className="  text-white text-[15px] font-bold  tracking-wider " >LIGHT MODE</div>
+                        }
                     </div>
                 </div>
                 <div className='relative'>
@@ -71,3 +83,5 @@ export default function Hero() {
         </div>
     )
 }
+
+
