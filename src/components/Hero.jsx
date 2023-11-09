@@ -69,8 +69,8 @@ export default function Hero() {
                         }
                         {
                             darkMode === false ?
-                                <div className=" text-indigo-700 text-[15px] font-bold  tracking-wider " >DARK MODE</div> :
-                                <div className="  text-white text-[15px] font-bold  tracking-wider " >LIGHT MODE</div>
+                                <div className=" text-indigo-700 text-[15px] font-bold  tracking-wider " >{language === "ENG" ? "DARK MODE" : "GECE MODU"}</div> :
+                                <div className="  text-white text-[15px] font-bold  tracking-wider " >{language === "ENG" ? "LIGHT MODE" : "GÜNDÜZ MODU"}</div>
                         }
                     </div>
                 </div>
