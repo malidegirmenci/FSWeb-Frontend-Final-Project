@@ -1,4 +1,4 @@
-import { useEffect,useContext } from 'react'
+import { useEffect, useContext } from 'react'
 import './App.css'
 import Footer from './components/Footer'
 import Hero from './components/Hero'
@@ -15,7 +15,7 @@ function App() {
   const data = useSelector((state) => state.data);
   const loading = useSelector((state) => state.loading);
   const dispatch = useDispatch();
-  const {initialDarkModeDedection}  = useContext(DarkModeContext);
+  const { initialDarkModeDedection } = useContext(DarkModeContext);
   useEffect(() => {
     dispatch(fetchAnother());
     initialDarkModeDedection();
@@ -23,7 +23,7 @@ function App() {
   }, [])
 
   return (
-    <div className='dark:bg-neutral-800 app'>
+    <div className='dark:bg-neutral-800'>
       {loading && <div className='h-screen dark:bg-indigo-950 flex justify-center items-center bg-[#4731D3]'><RiseLoader color="#cbf281" /></div>}
       {!loading && data &&
         <>
@@ -31,8 +31,9 @@ function App() {
           <Skills />
           <Profile />
           <Projects />
-          <Footer data={data}/>
-        </>}
+          <Footer data={data} />
+        </>
+      }
     </div>
   )
 }

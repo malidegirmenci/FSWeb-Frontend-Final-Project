@@ -62,9 +62,9 @@ export default function Hero() {
                                     <div className="w-0.5 h-0.5 left-[3px] top-[6px] absolute bg-[#8F88FF] rounded-full animatedSecondCircle "></div>
                                 </div>
                                 :
-                                <div className="w-[60px] h-[25px] relative left-0 top-0  bg-[#1A210B] rounded-[25px] cursor-pointer"  onClick={() => toggleDarkMode()}>
+                                <div className="w-[60px] h-[25px] relative left-0 top-0  bg-[#2a3613] rounded-[25px] cursor-pointer"  onClick={() => toggleDarkMode()}>
                                     <div className="w-[16px] h-[16px] left-[37.5px] top-[5px] absolute bg-amber-200 rounded-full animatedFirstCircleReverse"></div>
-                                    <div className="w-3.5 h-3.5 left-[35px] top-[6px] absolute bg-[#1A210B] rounded-full animatedSecondCircleReverse "></div>
+                                    <div className="w-3.5 h-3.5 left-[35px] top-[6px] absolute bg-[#2a3613] rounded-full animatedSecondCircleReverse "></div>
                                 </div>
                         }
                         {
