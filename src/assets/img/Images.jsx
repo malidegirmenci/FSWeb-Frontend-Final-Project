@@ -10,7 +10,8 @@ import rectangle05 from './shapes/Rectangle_05.svg';
 import rectangle06 from './shapes/Rectangle_06.svg';
 
 /*Profile Photos*/
-import profilePhoto from './profile_photo.png';
+import profilePhotoInHero from './profile_photo.png';
+import profilePhotoInProfile from './profile_photo2.png';
 
 /*Skills*/
 import javaScriptLogo from './skills/javaScript_logo.png';
@@ -21,8 +22,16 @@ import reduxLogo from './skills/redux_logo.png';
 import visualStudioLogo from './skills/visualStudio_logo.png';
 
 /*Projects*/
-import project01 from './projects/project_01.png';
-import project02 from './projects/project_02.png';
+import projectWorkintech from './projects/project_01.png';
+import projectJourney from './projects/project_02.png';
+
+/*Socials*/
+import github from './social/github.svg';
+import linkedin from './social/linkedin.svg';
+import atSign from './social/at-sign.svg';
+import codepen from './social/codepen.svg';
+import instagram from './social/instagram.svg';
+import twitter from './social/twitter.svg';
 
 export const Images = {
     shapes:{
@@ -41,7 +50,8 @@ export const Images = {
         }   
     },
     photos:{
-        profilePhoto
+        profilePhotoInHero,
+        profilePhotoInProfile
     },
     skills:{
         javaScriptLogo,
@@ -52,7 +62,15 @@ export const Images = {
         visualStudioLogo,
     },
     projects:{
-        project01,
-        project02,
+        projectWorkintech,
+        projectJourney,
+    },
+    socials:{
+        github,
+        linkedin,
+        twitter,
+        instagram,
+        atSign,
+        codepen
     }
 }

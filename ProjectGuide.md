@@ -31,10 +31,10 @@ Not\* Bu dökümanın en sonunda da, sunumda seni değerlendireceğimiz başlık
 
 [Bu bağlantıda](https://www.figma.com/file/YuAwEInBB8GqOO7wNosr5j/s12-design202304?node-id=0%3A1&t=U1HnfQaOkunlvpNb-1) 3 farklı tasarım var. Hangisini beğenirsen onu kullanabilirsin. CSS stillerini ve HTML/JSX iskeletini geliştirirken, tasarımı bire bir yaptığını **emin olana kadar** kesinlikle özelleştirmemeni tavsiye ediyoruz.
 
-- [ ] Tasarımdaki her bir section için ayrı bir component oluşturun.
-- [ ] Her component'in style'ını ayarlayın.
-- [ ] Verilerinizi kendi oluşturduğunuz, mock (örnek) verileri statik bir js dosyasından çekin.
-- [ ] `axios` ve reqres.in gibi bir servisle, web API simüle et.
+- [X] Tasarımdaki her bir section için ayrı bir component oluşturun.
+- [X] Her component'in style'ını ayarlayın.
+- [X] Verilerinizi kendi oluşturduğunuz, mock (örnek) verileri statik bir js dosyasından çekin.
+- [X] `axios` ve reqres.in gibi bir servisle, web API simüle et.
 - [ ] Dark Mode tasarımı da entegre edin.
 - [ ] Türkçe-İngilizce içerik oluşturun.
 - [ ] Responsive özelleştirmelerini yapın.
