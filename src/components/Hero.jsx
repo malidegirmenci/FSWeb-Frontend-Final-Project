@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useLocaleStorage } from '../hooks/useLocalStorage';
 import { changeLanguage } from '../store/actions';
-import { DarkModeContext } from '../context/darkModeContext';
+import { DarkModeContext } from '../context/darkModeContext.jsx';
 import './Hero.css';
 
 export default function Hero() {

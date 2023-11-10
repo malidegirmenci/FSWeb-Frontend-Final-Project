@@ -1,7 +1,4 @@
 import { useSelector } from "react-redux";
-/* TODO 
-[ ] Resimlere tekrar bak 
-*/
 
 export default function Projects() {
     const { projects,headers } = useSelector((state) => state.data)
