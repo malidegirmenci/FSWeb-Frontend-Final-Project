@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useLocaleStorage } from '../hooks/useLocalStorage';
 import { changeLanguage } from '../store/actions';
-import { DarkModeContext } from '../context/darkModeContext.jsx';
+import { DarkModeContext } from '../context/DarkModeContext.jsx';
 import './Hero.css';
 
 export default function Hero() {
@@ -31,7 +31,7 @@ export default function Hero() {
                             </div>
                         }
                     </div>
-                    <div className='relative max-lg:static '>
+                    <div className=' relative max-lg:static z-10'>
                         <div className="w-[240px] h-6  flex gap-2 items-center absolute left-4 max-lg:static ">
                             {
                                 darkMode === false ?
