@@ -8,7 +8,7 @@ import Skills from './components/Skills'
 import { fetchAnother } from './store/actions'
 import { useDispatch, useSelector } from 'react-redux'
 import { RiseLoader } from "react-spinners";
-import { DarkModeContext } from './context/darkModeContext';
+import { DarkModeContext } from './context/darkModeContext.jsx';
 
 
 function App() {
