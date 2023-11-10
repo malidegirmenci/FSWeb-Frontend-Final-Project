@@ -31,7 +31,7 @@ function App() {
           <Skills />
           <Profile />
           <Projects />
-          <Footer data={data} />
+          <Footer />
         </>
       }
     </div>
