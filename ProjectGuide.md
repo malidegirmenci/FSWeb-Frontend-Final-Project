@@ -35,9 +35,9 @@ Not\* Bu dökümanın en sonunda da, sunumda seni değerlendireceğimiz başlık
 - [X] Her component'in style'ını ayarlayın.
 - [X] Verilerinizi kendi oluşturduğunuz, mock (örnek) verileri statik bir js dosyasından çekin.
 - [X] `axios` ve reqres.in gibi bir servisle, web API simüle et.
-- [ ] Dark Mode tasarımı da entegre edin.
-- [ ] Türkçe-İngilizce içerik oluşturun.
-- [ ] Responsive özelleştirmelerini yapın.
+- [X] Dark Mode tasarımı da entegre edin.
+- [X] Türkçe-İngilizce içerik oluşturun.
+- [X] Responsive özelleştirmelerini yapın.
 
 #### Önemli Notlar!
 
@@ -76,9 +76,9 @@ Projenizi vercel'de yayınlayın.
 
 Frontend'de ne kadar yetenekli olduğunu, hünerlerini göstermek için ekstra yapabileceklerin.
 
-- [ ] Site ilk açıldığında, kullanıcın görünüm tercihini okuyup, ona göre dil ve renk temasını aktifleştirebilirsin. Kullanıcı tercihini, tarayıcı belleğine (localstorage) kaydedebilirsin.
-- [ ] Dark Mode geliştirmesi,
-- [ ] Türkçe/İngilizce içerik ve dil seçimi.
+- [X] Site ilk açıldığında, kullanıcın görünüm tercihini okuyup, ona göre dil ve renk temasını aktifleştirebilirsin. Kullanıcı tercihini, tarayıcı belleğine (localstorage) kaydedebilirsin.
+- [X] Dark Mode geliştirmesi,
+- [X] Türkçe/İngilizce içerik ve dil seçimi.
 
 | **Değerlendirme Kriteri**                                                                                      | **Puan** |
 | -------------------------------------------------------------------------------------------------------------- | -------- |
