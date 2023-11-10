@@ -2,8 +2,8 @@
     background-color:#262626
 }
 body {
-  --sb-track-color: #cbf281;
-  --sb-thumb-color: #4731d3;
+  --sb-track-color: #4731d3;
+  --sb-thumb-color: #cbf281;
   --sb-size: 8px;
 
   scrollbar-color: var(--sb-thumb-color) 

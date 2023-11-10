@@ -1,14 +1,11 @@
 import { useSelector } from "react-redux";
 
-/* TODO
-[ ] Basic Information Refactor need   
-*/
 export default function Profile() {
     const {profile, headers} = useSelector((state) => state.data)
     const language = useSelector((state) => state.language);
     return (
         <div className="bg-[#4731D3] dark:bg-indigo-950 py-[6rem]">
-            <div className="grid grid-rows w-[70%] mx-auto gap-10">
+            <div className="grid w-[70%] mx-auto gap-10">
                 <h2 className="text-lime-300 text-5xl font-bold leading-[48px] tracking-wide">{language === "ENG" ? headers.profile.ENG : headers.profile.TR}</h2>
                 <div className="grid grid-cols-[30%,40%,30%] gap-x-10 max-lg:grid-cols-1 max-lg:gap-2 " >
                     <div className="grid">
