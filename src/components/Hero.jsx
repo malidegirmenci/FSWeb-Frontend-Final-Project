@@ -16,8 +16,8 @@ export default function Hero() {
         dispatch(changeLanguage(lang));
     }
     return (
-        <div className="h-screen flex font-['Inter']">
-            <div className="basis-[70%] bg-[#4731D3] dark:bg-indigo-950 pt-10">
+        <div className="grid grid-cols-[70%,30%] font-['Inter']">
+            <div className=" bg-[#4731D3] dark:bg-indigo-950 py-20">
                 <div className="flex justify-end px-2">
                     <div className='flex items-center justify-end gap-2 flex-wrap'>
                         <div className="text-[15px] font-bold  justify-start tracking-wider items-start flex">
@@ -52,7 +52,7 @@ export default function Hero() {
                     </div>
                 </div>
             </div>
-            <div className="basis-[30%] bg-[#CBF281] dark:bg-[#19200B] pt-10 px-2 flex flex-col gap-16  ">
+            <div className=" bg-[#CBF281] dark:bg-[#19200B] py-20 px-2 flex flex-col gap-16  ">
                 <div className="justify-start items-center gap-4 flex">
                     <div className="w-[240px] h-6  flex gap-2 items-center">
                         {
