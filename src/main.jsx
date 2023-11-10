@@ -4,7 +4,7 @@ import App from './App.jsx'
 import './index.css'
 import { Provider } from 'react-redux'
 import { myStore } from './store/store.jsx'
-import DarkModeProvider from './context/darkModeContext.jsx'
+import DarkModeProvider from './context/DarkModeContext.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <DarkModeProvider>
