@@ -27,7 +27,7 @@ import projectJourney from './projects/project_02.png';
 
 /*Socials*/
 import github from './social/github.svg';
-import linkedin from './social/linkedin.svg';
+import linkedin from './social/linkedIn.svg';
 import atSign from './social/at-sign.svg';
 import codepen from './social/codepen.svg';
 import instagram from './social/instagram.svg';
